@@ -17,7 +17,7 @@ async function run() {
     try {
         await client.connect();
         console.log("Niche's Database Connected");
-        const database = client.db("Niche_product");
+        const database = client.db("car-seller");
         const productsCollection = database.collection("Products");
         const orderedCollection = database.collection("Orders");
         const adminsCollection = database.collection("Admins");

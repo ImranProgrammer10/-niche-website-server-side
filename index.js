@@ -10,14 +10,14 @@ app.use(express.json());
 
 
 const { MongoClient } = require('mongodb');
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.xq8ej.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.jpgnt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 async function run() {
     try {
         await client.connect();
         console.log("Niche's Database Connected");
-        const database = client.db("car-seller");
+        const database = client.db("Niche_product");
         const productsCollection = database.collection("Products");
         const orderedCollection = database.collection("Orders");
         const adminsCollection = database.collection("Admins");
